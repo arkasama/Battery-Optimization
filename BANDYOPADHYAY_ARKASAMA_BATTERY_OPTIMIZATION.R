@@ -1,3 +1,5 @@
+#This code optimizes the operation of a 25 MW (50 MWh) energy storage system/battery by buying energy when ERCOT market prices 
+#are low and selling when market prices are high
 #Set the working directory
 dir = getwd()
 setwd(dir)
@@ -85,8 +87,8 @@ RTM <- (1+incr/100)* RTM_2016_5
 E_max <- 50 #maximum battery energy
 E_in <- E_max/2  #initial battery energy at the beginning of the analysis period
 E_min <-5 #minimum battery energy
-storage_base <- 25
-eff <- sqrt(0.85)
+storage_base <- 25 #storage capacity is 25 MW (50 MWh)
+eff <- sqrt(0.85) #roundtrip charge and discharge efficiency
 
 #initialize different variables 
 revenue_for_jan <- 0
